@@ -7,48 +7,69 @@
 <title>Raj Rafregiretinon | AC & Home Appliance Service</title>
 
 <meta name="description"
-content="Raj Rafregiretinon provides professional AC, refrigerator, cooler and washing machine repair and service. Book doorstep service on WhatsApp.">
+content="Raj Rafregiretinon - Professional AC, Refrigerator, Cooler and Washing Machine service. Book service directly on WhatsApp.">
+
+<meta name="theme-color" content="#071a33">
 
 <style>
+:root{
+    --primary:#087cff;
+    --primary2:#00c6ff;
+    --dark:#061426;
+    --dark2:#0b203a;
+    --text:#10243e;
+    --muted:#66758a;
+    --white:#ffffff;
+    --light:#f4f8fc;
+    --border:#dce7f2;
+    --success:#19c37d;
+    --shadow:0 18px 50px rgba(5,35,70,.12);
+    --radius:22px;
+}
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-html{
     scroll-behavior:smooth;
 }
 
 body{
-    background:#f5f9fc;
-    color:#102b42;
+    font-family:Inter,Segoe UI,Arial,sans-serif;
+    background:#f7faff;
+    color:var(--text);
     overflow-x:hidden;
 }
 
 a{
     text-decoration:none;
+    color:inherit;
 }
 
-.container{
-    width:min(1180px,92%);
-    margin:auto;
+button,
+input,
+select,
+textarea{
+    font:inherit;
 }
 
 /* ================= HEADER ================= */
 
 header{
-    position:sticky;
+    position:fixed;
     top:0;
-    z-index:9999;
-    background:rgba(255,255,255,.96);
-    backdrop-filter:blur(14px);
-    border-bottom:1px solid #e5edf3;
+    left:0;
+    width:100%;
+    z-index:999;
+    background:rgba(6,20,38,.90);
+    backdrop-filter:blur(18px);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .navbar{
-    min-height:76px;
+    max-width:1200px;
+    margin:auto;
+    padding:15px 20px;
     display:flex;
     align-items:center;
     justify-content:space-between;
@@ -58,289 +79,277 @@ header{
 .logo{
     display:flex;
     align-items:center;
-    gap:11px;
+    gap:12px;
+    color:white;
 }
 
 .logo-icon{
     width:46px;
     height:46px;
-    border-radius:13px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    color:#fff;
-    font-size:23px;
+    border-radius:14px;
+    display:grid;
+    place-items:center;
     font-weight:900;
-    background:linear-gradient(135deg,#0066ff,#00b8ff);
-    box-shadow:0 8px 22px rgba(0,102,255,.22);
+    font-size:22px;
+    background:linear-gradient(135deg,var(--primary),var(--primary2));
+    box-shadow:0 8px 25px rgba(0,157,255,.3);
 }
 
-.logo h1{
-    font-size:18px;
-    letter-spacing:.5px;
-    color:#092842;
-}
-
-.logo small{
+.logo-text strong{
     display:block;
-    color:#7a8996;
-    font-size:10px;
-    margin-top:3px;
+    font-size:17px;
+    letter-spacing:.4px;
+}
+
+.logo-text span{
+    font-size:11px;
+    color:#a9bfd7;
 }
 
 .nav-links{
     display:flex;
-    align-items:center;
     gap:25px;
+    align-items:center;
 }
 
 .nav-links a{
-    color:#405568;
-    font-size:13px;
-    font-weight:700;
+    color:#d9e7f7;
+    font-size:14px;
+    transition:.3s;
 }
 
 .nav-links a:hover{
-    color:#006cff;
+    color:#39c5ff;
 }
 
-.nav-actions{
+.nav-buttons{
     display:flex;
     gap:9px;
 }
 
-.call-btn,
-.whatsapp-btn{
-    padding:11px 16px;
-    border-radius:9px;
-    font-size:13px;
-    font-weight:800;
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:13px 19px;
+    border-radius:12px;
+    border:0;
+    cursor:pointer;
+    font-weight:700;
+    transition:.3s;
 }
 
-.call-btn{
-    color:#006cff;
-    background:#eef6ff;
-    border:1px solid #d7e8ff;
+.btn:hover{
+    transform:translateY(-3px);
 }
 
-.whatsapp-btn{
+.btn-primary{
+    background:linear-gradient(135deg,var(--primary),var(--primary2));
     color:white;
-    background:#19b957;
+    box-shadow:0 10px 28px rgba(0,130,255,.25);
+}
+
+.btn-outline{
+    color:white;
+    border:1px solid rgba(255,255,255,.22);
+    background:rgba(255,255,255,.06);
 }
 
 /* ================= HERO ================= */
 
 .hero{
-    position:relative;
-    min-height:650px;
-    overflow:hidden;
+    min-height:760px;
+    padding:150px 20px 90px;
     background:
-    radial-gradient(circle at 85% 20%,rgba(0,190,255,.25),transparent 28%),
-    radial-gradient(circle at 10% 85%,rgba(0,110,255,.16),transparent 32%),
-    linear-gradient(135deg,#061a2e,#073d67 58%,#006da8);
+        radial-gradient(circle at 85% 25%,rgba(0,198,255,.25),transparent 30%),
+        radial-gradient(circle at 15% 70%,rgba(8,124,255,.20),transparent 30%),
+        linear-gradient(135deg,#04101f,#092848 55%,#06172b);
+    position:relative;
+    overflow:hidden;
 }
 
-.hero::after{
+.hero:after{
     content:"";
     position:absolute;
-    width:500px;
-    height:500px;
-    border:1px solid rgba(255,255,255,.09);
+    width:600px;
+    height:600px;
+    border:1px solid rgba(255,255,255,.06);
     border-radius:50%;
-    right:-160px;
-    top:80px;
+    right:-180px;
+    top:100px;
 }
 
-.hero-inner{
-    min-height:650px;
-    display:flex;
+.hero-container{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
     align-items:center;
+    gap:60px;
     position:relative;
     z-index:2;
-}
-
-.hero-content{
-    max-width:720px;
 }
 
 .badge{
     display:inline-flex;
     align-items:center;
     gap:8px;
-    padding:9px 15px;
+    padding:8px 13px;
+    background:rgba(0,198,255,.10);
+    border:1px solid rgba(0,198,255,.25);
+    color:#5edaff;
     border-radius:50px;
-    background:rgba(255,255,255,.1);
-    border:1px solid rgba(255,255,255,.18);
-    color:#dff6ff;
-    font-size:12px;
-    font-weight:700;
+    font-size:13px;
     margin-bottom:22px;
 }
 
-.dot{
-    width:8px;
-    height:8px;
-    border-radius:50%;
-    background:#2be879;
-    box-shadow:0 0 12px #2be879;
-}
-
-.hero h2{
+.hero h1{
     color:white;
     font-size:clamp(42px,6vw,72px);
     line-height:1.02;
-    letter-spacing:-2.5px;
-    margin-bottom:24px;
+    letter-spacing:-2px;
+    margin-bottom:22px;
 }
 
-.hero h2 span{
-    color:#56d8ff;
+.hero h1 span{
+    background:linear-gradient(90deg,#25a8ff,#70e7ff);
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
 .hero p{
-    max-width:650px;
-    color:#d7e8f5;
-    font-size:17px;
-    line-height:1.75;
-    margin-bottom:32px;
+    color:#b6c9dd;
+    font-size:18px;
+    line-height:1.7;
+    max-width:620px;
 }
 
-.hero-buttons{
+.hero-actions{
     display:flex;
     flex-wrap:wrap;
     gap:12px;
+    margin-top:32px;
 }
 
-.hero-btn{
-    padding:15px 21px;
-    border-radius:11px;
-    font-size:14px;
-    font-weight:800;
-    transition:.25s;
+.hero-info{
+    margin-top:35px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
 }
 
-.hero-btn:hover{
-    transform:translateY(-3px);
+.info-item{
+    display:flex;
+    align-items:center;
+    gap:9px;
+    color:#c6d7e9;
+    font-size:13px;
 }
 
-.primary{
-    color:white;
-    background:#19b957;
-    box-shadow:0 12px 28px rgba(0,0,0,.18);
+.info-dot{
+    width:9px;
+    height:9px;
+    border-radius:50%;
+    background:#23d98b;
+    box-shadow:0 0 15px #23d98b;
 }
 
-.secondary{
-    color:white;
-    background:rgba(255,255,255,.1);
-    border:1px solid rgba(255,255,255,.25);
-}
+/* HERO APPLIANCE CARD */
 
 .hero-card{
-    position:absolute;
-    right:4%;
-    bottom:85px;
-    width:235px;
-    padding:25px;
-    border-radius:22px;
-    background:rgba(255,255,255,.1);
-    border:1px solid rgba(255,255,255,.2);
-    backdrop-filter:blur(15px);
+    min-height:460px;
+    border-radius:30px;
+    padding:28px;
+    background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.035));
+    border:1px solid rgba(255,255,255,.13);
+    backdrop-filter:blur(16px);
+    box-shadow:0 35px 80px rgba(0,0,0,.25);
+    position:relative;
+    animation:float 5s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-10px)}
+}
+
+.hero-appliance{
+    height:270px;
+    border-radius:24px;
+    background:
+        radial-gradient(circle at 50% 35%,rgba(55,200,255,.28),transparent 32%),
+        linear-gradient(145deg,#123556,#07192c);
+    display:grid;
+    place-items:center;
+    font-size:125px;
+    box-shadow:inset 0 0 60px rgba(0,198,255,.08);
+}
+
+.hero-card-bottom{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:12px;
+    margin-top:15px;
+}
+
+.mini-card{
+    padding:16px;
+    border-radius:16px;
+    background:rgba(255,255,255,.07);
+    border:1px solid rgba(255,255,255,.08);
     color:white;
 }
 
-.hero-card-icon{
-    font-size:43px;
-    margin-bottom:12px;
+.mini-card small{
+    color:#9bb3cc;
 }
 
-.hero-card h3{
-    font-size:18px;
-    margin-bottom:8px;
-}
-
-.hero-card p{
-    margin:0;
-    font-size:12px;
-    color:#cde5f3;
-    line-height:1.6;
-}
-
-/* ================= QUICK BAR ================= */
-
-.quick{
-    position:relative;
-    z-index:10;
-    margin-top:-42px;
-}
-
-.quick-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    background:white;
-    border-radius:20px;
-    box-shadow:0 18px 45px rgba(18,50,75,.12);
-    overflow:hidden;
-}
-
-.quick-item{
-    padding:24px 15px;
-    text-align:center;
-    border-right:1px solid #edf2f6;
-}
-
-.quick-item:last-child{
-    border:0;
-}
-
-.quick-item div{
-    font-size:29px;
-    margin-bottom:9px;
-}
-
-.quick-item h3{
-    font-size:14px;
-}
-
-.quick-item p{
-    color:#7c8b97;
-    font-size:11px;
+.mini-card strong{
+    display:block;
     margin-top:5px;
 }
 
-/* ================= GENERAL SECTIONS ================= */
+/* ================= COMMON ================= */
 
-.section{
-    padding:100px 0;
+section{
+    padding:90px 20px;
 }
 
-.section-head{
-    max-width:720px;
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-heading{
     text-align:center;
-    margin:0 auto 48px;
+    margin-bottom:50px;
 }
 
-.kicker{
-    color:#0072ff;
-    font-size:11px;
-    font-weight:900;
-    letter-spacing:2px;
+.section-heading .tag{
+    color:var(--primary);
+    font-size:13px;
+    font-weight:800;
+    text-transform:uppercase;
+    letter-spacing:1.5px;
 }
 
-.section-head h2{
-    color:#102b42;
-    font-size:clamp(30px,5vw,45px);
-    margin:12px 0;
+.section-heading h2{
+    font-size:42px;
+    margin:10px 0;
 }
 
-.section-head p{
-    color:#718096;
+.section-heading p{
+    max-width:650px;
+    margin:auto;
+    color:var(--muted);
     line-height:1.7;
 }
 
 /* ================= SERVICES ================= */
 
 .services{
-    background:#f7fafc;
+    background:white;
 }
 
 .service-grid{
@@ -350,78 +359,141 @@ header{
 }
 
 .service-card{
-    padding:28px 23px;
     background:white;
-    border:1px solid #e6eef4;
-    border-radius:20px;
-    box-shadow:0 10px 30px rgba(20,60,90,.055);
-    transition:.3s;
+    border:1px solid var(--border);
+    border-radius:var(--radius);
+    padding:28px 22px;
+    transition:.35s;
+    box-shadow:0 8px 25px rgba(12,48,82,.05);
 }
 
 .service-card:hover{
-    transform:translateY(-7px);
-    box-shadow:0 20px 45px rgba(20,60,90,.12);
+    transform:translateY(-9px);
+    box-shadow:var(--shadow);
+    border-color:#b8dcff;
 }
 
 .service-icon{
-    width:59px;
-    height:59px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:16px;
-    background:#eef7ff;
-    font-size:29px;
-    margin-bottom:19px;
+    width:65px;
+    height:65px;
+    border-radius:18px;
+    display:grid;
+    place-items:center;
+    font-size:32px;
+    background:linear-gradient(135deg,#e8f5ff,#dff9ff);
+    margin-bottom:20px;
 }
 
 .service-card h3{
-    font-size:18px;
+    font-size:20px;
     margin-bottom:10px;
 }
 
 .service-card p{
-    color:#718096;
-    font-size:13px;
-    line-height:1.65;
-    margin-bottom:18px;
-}
-
-.service-list{
-    list-style:none;
-    margin-bottom:20px;
-}
-
-.service-list li{
-    color:#43596a;
-    font-size:12px;
-    margin:8px 0;
+    color:var(--muted);
+    line-height:1.6;
+    font-size:14px;
 }
 
 .service-link{
-    color:#0072ff;
-    font-size:12px;
+    display:inline-block;
+    margin-top:18px;
+    color:var(--primary);
+    font-size:14px;
     font-weight:800;
 }
 
-/* ================= OTHER SERVICES ================= */
+/* ================= STATS ================= */
 
-.other-services{
-    margin-top:25px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:10px;
+.stats{
+    padding:50px 20px;
+    background:linear-gradient(135deg,#06182c,#0b3155);
 }
 
-.tag{
-    padding:10px 15px;
-    border-radius:50px;
-    background:white;
-    border:1px solid #e1eaf1;
-    color:#405568;
-    font-size:12px;
-    font-weight:700;
+.stats-grid{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.stat{
+    text-align:center;
+    color:white;
+    padding:20px;
+}
+
+.stat strong{
+    font-size:34px;
+    display:block;
+    color:#55d9ff;
+}
+
+.stat span{
+    color:#a9bfd5;
+    font-size:13px;
+}
+
+/* ================= ABOUT ================= */
+
+.about{
+    background:#f7faff;
+}
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-visual{
+    min-height:420px;
+    border-radius:30px;
+    padding:25px;
+    background:
+        radial-gradient(circle at 50% 40%,rgba(0,198,255,.25),transparent 35%),
+        linear-gradient(145deg,#08203b,#061322);
+    display:grid;
+    place-items:center;
+    font-size:140px;
+    box-shadow:var(--shadow);
+}
+
+.about-content h2{
+    font-size:42px;
+    margin-bottom:20px;
+}
+
+.about-content>p{
+    color:var(--muted);
+    line-height:1.8;
+}
+
+.check-list{
+    list-style:none;
+    margin-top:25px;
+}
+
+.check-list li{
+    margin:15px 0;
+    display:flex;
+    gap:10px;
+    align-items:flex-start;
+    font-weight:600;
+}
+
+.check{
+    width:24px;
+    height:24px;
+    flex:none;
+    border-radius:50%;
+    background:#dcfff0;
+    color:#0ab878;
+    display:grid;
+    place-items:center;
+    font-size:13px;
 }
 
 /* ================= BRANDS ================= */
@@ -431,183 +503,91 @@ header{
 }
 
 .brand-grid{
-    max-width:1000px;
-    margin:auto;
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:18px;
 }
 
 .brand{
-    text-align:center;
-    padding:30px 15px;
-    border:1px solid #e4edf3;
+    padding:28px 15px;
+    border:1px solid var(--border);
     border-radius:18px;
-    background:#fbfdff;
+    text-align:center;
+    background:#fff;
+    font-size:20px;
+    font-weight:900;
     transition:.3s;
 }
 
 .brand:hover{
-    transform:translateY(-5px);
-    box-shadow:0 15px 35px rgba(20,60,90,.09);
+    transform:scale(1.03);
+    box-shadow:var(--shadow);
 }
 
-.brand-name{
-    font-size:21px;
-    font-weight:900;
-    margin-bottom:9px;
-}
-
-.brand:nth-child(1) .brand-name{color:#1268d9}
-.brand:nth-child(2) .brand-name{color:#1767c9}
-.brand:nth-child(3) .brand-name{color:#0099d7}
-.brand:nth-child(4) .brand-name{color:#1474c4}
-
-.brand p{
-    color:#7a8996;
+.brand span{
+    display:block;
+    color:#718196;
     font-size:11px;
-}
-
-/* ================= WHY US ================= */
-
-.why{
-    background:#071f35;
-    color:white;
-}
-
-.why-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:70px;
-    align-items:center;
-}
-
-.why h2{
-    font-size:clamp(35px,5vw,55px);
-    line-height:1.07;
-    margin:14px 0 20px;
-}
-
-.why-text{
-    color:#bdd0df;
-    line-height:1.7;
-    max-width:480px;
-    margin-bottom:28px;
-}
-
-.feature-grid{
-    display:grid;
-    gap:13px;
-}
-
-.feature{
-    display:flex;
-    gap:15px;
-    padding:19px;
-    border-radius:15px;
-    background:rgba(255,255,255,.055);
-    border:1px solid rgba(255,255,255,.08);
-}
-
-.feature-icon{
-    min-width:48px;
-    height:48px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    border-radius:12px;
-    background:rgba(255,255,255,.08);
-    font-size:22px;
-}
-
-.feature h3{
-    font-size:14px;
-    margin-bottom:5px;
-}
-
-.feature p{
-    color:#aac1d1;
-    font-size:11px;
-    line-height:1.5;
+    font-weight:500;
+    margin-top:5px;
 }
 
 /* ================= BOOKING ================= */
 
 .booking{
-    background:#f5f9fc;
+    background:
+        radial-gradient(circle at 90% 20%,rgba(0,198,255,.18),transparent 30%),
+        linear-gradient(135deg,#061528,#0b2948);
 }
 
-.booking-wrapper{
-    max-width:1050px;
+.booking-grid{
+    max-width:1100px;
     margin:auto;
     display:grid;
     grid-template-columns:.8fr 1.2fr;
-    background:white;
-    border-radius:25px;
-    overflow:hidden;
-    box-shadow:0 20px 55px rgba(20,60,90,.1);
+    gap:35px;
+    align-items:stretch;
 }
 
 .booking-info{
-    padding:45px;
-    background:linear-gradient(145deg,#06203a,#0068a5);
     color:white;
+    padding:35px 10px;
 }
 
 .booking-info h2{
-    font-size:35px;
-    line-height:1.15;
-    margin:13px 0 17px;
+    font-size:42px;
+    margin-bottom:18px;
 }
 
 .booking-info p{
-    color:#cce1ed;
-    line-height:1.7;
-    font-size:13px;
+    color:#b4c8dc;
+    line-height:1.8;
 }
 
-.contact-info{
+.booking-points{
     margin-top:30px;
+    display:grid;
+    gap:14px;
 }
 
-.contact-row{
+.booking-point{
     display:flex;
     gap:12px;
     align-items:center;
-    margin:17px 0;
-    color:#e6f4fb;
-    font-size:13px;
-}
-
-.contact-icon{
-    width:38px;
-    height:38px;
-    border-radius:10px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    background:rgba(255,255,255,.1);
+    color:#d7e6f4;
 }
 
 .booking-form{
-    padding:45px;
-}
-
-.booking-form h3{
-    font-size:25px;
-    margin-bottom:6px;
-}
-
-.booking-form .subtitle{
-    color:#7a8996;
-    font-size:12px;
-    margin-bottom:25px;
+    background:white;
+    padding:30px;
+    border-radius:25px;
+    box-shadow:0 30px 80px rgba(0,0,0,.22);
 }
 
 .form-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:15px;
+    gap:16px;
 }
 
 .field{
@@ -621,257 +601,211 @@ header{
 }
 
 .field label{
-    font-size:11px;
+    font-size:13px;
     font-weight:800;
-    color:#43596a;
 }
 
 .field input,
 .field select,
 .field textarea{
     width:100%;
-    padding:13px;
-    border:1px solid #dce6ed;
-    border-radius:9px;
+    border:1px solid var(--border);
+    background:#f8fbff;
+    padding:13px 14px;
+    border-radius:12px;
     outline:none;
-    background:#fbfdff;
-    color:#213b50;
-    font-size:13px;
+    transition:.2s;
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus{
-    border-color:#0072ff;
-    box-shadow:0 0 0 3px rgba(0,114,255,.08);
+    border-color:var(--primary);
+    box-shadow:0 0 0 4px rgba(8,124,255,.08);
 }
 
 .field textarea{
-    min-height:90px;
+    min-height:105px;
     resize:vertical;
 }
 
-.submit{
+.submit-btn{
     width:100%;
     margin-top:18px;
-    padding:15px;
+    padding:16px;
     border:0;
-    border-radius:10px;
-    background:#19b957;
+    border-radius:13px;
+    background:linear-gradient(135deg,#0acb82,#08a96d);
     color:white;
-    font-size:14px;
     font-weight:900;
     cursor:pointer;
+    transition:.3s;
 }
 
-/* ================= LOCATION ================= */
+.submit-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 12px 30px rgba(10,203,130,.25);
+}
+
+/* ================= MAP ================= */
 
 .location{
-    background:white;
+    background:#f7faff;
 }
 
 .location-card{
     max-width:1000px;
     margin:auto;
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    border-radius:22px;
+    border-radius:28px;
     overflow:hidden;
-    border:1px solid #e4edf3;
-    box-shadow:0 15px 40px rgba(20,60,90,.08);
+    background:white;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
 }
 
-.map-area{
-    min-height:340px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+.map-placeholder{
+    min-height:330px;
+    display:grid;
+    place-items:center;
     text-align:center;
     padding:30px;
     background:
-    linear-gradient(rgba(0,110,170,.78),rgba(0,50,90,.88)),
-    repeating-linear-gradient(
-        45deg,
-        #dcebf3,
-        #dcebf3 10px,
-        #d4e4ed 10px,
-        #d4e4ed 20px
-    );
+        linear-gradient(rgba(4,22,40,.78),rgba(4,22,40,.88)),
+        radial-gradient(circle,#149fff,#061629);
     color:white;
 }
 
 .map-pin{
-    font-size:55px;
+    font-size:65px;
+    margin-bottom:15px;
+}
+
+.map-placeholder h3{
+    font-size:28px;
     margin-bottom:10px;
 }
 
-.map-area h3{
-    font-size:24px;
-}
-
-.map-area p{
-    color:#d8edf6;
-    font-size:12px;
-    margin:10px 0 20px;
-}
-
-.map-button{
-    display:inline-block;
-    padding:12px 18px;
-    border-radius:9px;
-    background:white;
-    color:#0067a5;
-    font-size:12px;
-    font-weight:900;
-}
-
-.location-info{
-    padding:40px;
-}
-
-.location-info h3{
-    font-size:27px;
-    margin-bottom:12px;
-}
-
-.location-info > p{
-    color:#718096;
-    font-size:13px;
+.map-placeholder p{
+    color:#b9cce0;
+    max-width:550px;
+    margin:auto;
     line-height:1.7;
 }
 
-.info-box{
-    margin-top:20px;
-    padding:16px;
-    border-radius:12px;
-    background:#f5f9fc;
+.location-bottom{
+    padding:25px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
 
-.info-box strong{
-    display:block;
-    font-size:12px;
-    margin-bottom:6px;
-}
-
-.info-box span{
-    color:#718096;
-    font-size:12px;
+.location-bottom p{
+    color:var(--muted);
+    font-size:14px;
 }
 
 /* ================= FAQ ================= */
 
 .faq{
-    background:#f7fafc;
+    background:white;
 }
 
-.faq-list{
-    max-width:800px;
+.faq-grid{
+    max-width:850px;
     margin:auto;
 }
 
 details{
+    border:1px solid var(--border);
+    border-radius:15px;
+    margin-bottom:12px;
     background:white;
-    border:1px solid #e3ebf1;
-    border-radius:12px;
-    margin-bottom:11px;
-    padding:18px 20px;
+    overflow:hidden;
 }
 
 summary{
     cursor:pointer;
+    padding:20px;
     font-weight:800;
-    font-size:13px;
-    color:#18364d;
+    list-style:none;
+}
+
+summary::-webkit-details-marker{
+    display:none;
 }
 
 details p{
-    color:#718096;
-    font-size:12px;
+    padding:0 20px 20px;
+    color:var(--muted);
     line-height:1.7;
-    margin-top:12px;
 }
 
 /* ================= CTA ================= */
 
 .cta{
-    padding:80px 20px;
-    background:linear-gradient(135deg,#0066ff,#00a8dc);
-    text-align:center;
+    padding:70px 20px;
+    background:linear-gradient(135deg,#087cff,#00bce8);
     color:white;
+    text-align:center;
 }
 
 .cta h2{
-    font-size:clamp(30px,5vw,48px);
-    margin-bottom:12px;
+    font-size:42px;
+    margin-bottom:13px;
 }
 
 .cta p{
-    color:#dff5ff;
-    font-size:14px;
+    color:#e7f9ff;
     margin-bottom:25px;
-}
-
-.cta-button{
-    display:inline-block;
-    padding:14px 22px;
-    border-radius:10px;
-    background:#19b957;
-    color:white;
-    font-weight:900;
-    font-size:13px;
 }
 
 /* ================= FOOTER ================= */
 
 footer{
-    background:#061827;
-    color:white;
-    padding:45px 0 20px;
+    background:#04101e;
+    color:#9fb3c8;
+    padding:50px 20px 85px;
 }
 
 .footer-grid{
+    max-width:1200px;
+    margin:auto;
     display:grid;
-    grid-template-columns:1.5fr 1fr 1fr;
+    grid-template-columns:1.4fr 1fr 1fr;
     gap:40px;
-    padding-bottom:35px;
 }
 
-.footer-brand h2{
-    font-size:19px;
+.footer-title{
+    color:white;
+    font-size:20px;
+    font-weight:900;
+    margin-bottom:14px;
 }
 
-.footer-brand p{
-    color:#8fa6b6;
-    font-size:12px;
+footer p{
     line-height:1.7;
-    max-width:350px;
-    margin-top:12px;
+    font-size:14px;
 }
 
-.footer-column h3{
-    font-size:13px;
-    margin-bottom:15px;
+.footer-links{
+    display:grid;
+    gap:10px;
 }
 
-.footer-column a{
-    display:block;
-    color:#8fa6b6;
-    font-size:12px;
-    margin:9px 0;
+.footer-links a:hover{
+    color:#35caff;
 }
 
 .footer-bottom{
+    max-width:1200px;
+    margin:35px auto 0;
+    padding-top:25px;
     border-top:1px solid rgba(255,255,255,.08);
-    padding-top:20px;
     display:flex;
     justify-content:space-between;
     gap:15px;
-    color:#718796;
-    font-size:10px;
-}
-
-.footer-bottom a{
-    color:#53d5ff;
+    font-size:12px;
 }
 
 /* ================= FLOATING BUTTONS ================= */
@@ -879,31 +813,54 @@ footer{
 .floating{
     position:fixed;
     right:18px;
-    bottom:18px;
-    z-index:999;
+    bottom:20px;
+    z-index:1000;
     display:flex;
     flex-direction:column;
-    gap:9px;
+    gap:10px;
 }
 
 .float-btn{
-    width:51px;
-    height:51px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    width:54px;
+    height:54px;
     border-radius:50%;
+    display:grid;
+    place-items:center;
     color:white;
-    font-size:21px;
-    box-shadow:0 8px 25px rgba(0,0,0,.2);
+    font-size:23px;
+    box-shadow:0 10px 25px rgba(0,0,0,.25);
+    transition:.3s;
 }
 
-.float-wa{
-    background:#19b957;
+.float-btn:hover{
+    transform:scale(1.1);
 }
 
-.float-call{
-    background:#006cff;
+.whatsapp{
+    background:#18c879;
+}
+
+.call{
+    background:#087cff;
+}
+
+/* ================= MOBILE BAR ================= */
+
+.mobile-bar{
+    display:none;
+}
+
+/* ================= ANIMATION ================= */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity .7s ease,transform .7s ease;
+}
+
+.reveal.show{
+    opacity:1;
+    transform:translateY(0);
 }
 
 /* ================= RESPONSIVE ================= */
@@ -914,7 +871,27 @@ footer{
         display:none;
     }
 
+    .hero-container,
+    .about-grid,
+    .booking-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:130px;
+    }
+
+    .hero-card{
+        max-width:650px;
+        width:100%;
+        margin:auto;
+    }
+
     .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats-grid{
         grid-template-columns:repeat(2,1fr);
     }
 
@@ -922,21 +899,8 @@ footer{
         grid-template-columns:repeat(2,1fr);
     }
 
-    .hero-card{
-        display:none;
-    }
-
-    .why-grid{
-        grid-template-columns:1fr;
-        gap:45px;
-    }
-
-    .booking-wrapper{
-        grid-template-columns:1fr;
-    }
-
-    .location-card{
-        grid-template-columns:1fr;
+    .about-visual{
+        min-height:330px;
     }
 
     .footer-grid{
@@ -946,16 +910,16 @@ footer{
 
 @media(max-width:650px){
 
+    section{
+        padding:65px 15px;
+    }
+
     .navbar{
-        min-height:68px;
+        padding:12px 15px;
     }
 
-    .logo h1{
+    .logo-text strong{
         font-size:14px;
-    }
-
-    .logo small{
-        font-size:8px;
     }
 
     .logo-icon{
@@ -963,73 +927,78 @@ footer{
         height:40px;
     }
 
-    .call-btn{
-        display:none;
-    }
-
-    .whatsapp-btn{
+    .nav-buttons .btn{
         padding:10px 12px;
-        font-size:11px;
+        font-size:12px;
     }
 
-    .hero,
-    .hero-inner{
-        min-height:600px;
+    .hero{
+        min-height:auto;
+        padding:125px 15px 65px;
     }
 
-    .hero h2{
+    .hero h1{
         font-size:43px;
+        letter-spacing:-1.5px;
     }
 
     .hero p{
-        font-size:14px;
+        font-size:15px;
     }
 
-    .hero-buttons{
-        flex-direction:column;
+    .hero-actions{
+        display:grid;
+        grid-template-columns:1fr;
     }
 
-    .hero-btn{
-        width:100%;
-        text-align:center;
+    .hero-card{
+        min-height:auto;
+        padding:18px;
     }
 
-    .quick{
-        margin-top:-32px;
+    .hero-appliance{
+        height:220px;
+        font-size:90px;
     }
 
-    .quick-grid{
-        grid-template-columns:1fr 1fr;
-    }
-
-    .quick-item{
-        padding:20px 8px;
-    }
-
-    .quick-item:nth-child(1),
-    .quick-item:nth-child(2){
-        border-bottom:1px solid #edf2f6;
-    }
-
-    .quick-item:nth-child(2){
-        border-right:0;
-    }
-
-    .section{
-        padding:70px 0;
+    .section-heading h2,
+    .about-content h2,
+    .booking-info h2,
+    .cta h2{
+        font-size:31px;
     }
 
     .service-grid{
-        grid-template-columns:1fr;
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+    }
+
+    .service-card{
+        padding:20px 15px;
+    }
+
+    .service-card h3{
+        font-size:17px;
+    }
+
+    .service-card p{
+        font-size:13px;
+    }
+
+    .stats-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stat strong{
+        font-size:27px;
     }
 
     .brand-grid{
         grid-template-columns:1fr 1fr;
     }
 
-    .booking-info,
     .booking-form{
-        padding:28px 22px;
+        padding:20px 15px;
     }
 
     .form-grid{
@@ -1040,8 +1009,13 @@ footer{
         grid-column:auto;
     }
 
-    .location-info{
-        padding:28px 22px;
+    .location-bottom{
+        flex-direction:column;
+        align-items:stretch;
+    }
+
+    .location-bottom .btn{
+        width:100%;
     }
 
     .footer-grid{
@@ -1050,6 +1024,41 @@ footer{
 
     .footer-bottom{
         flex-direction:column;
+    }
+
+    .floating{
+        bottom:78px;
+    }
+
+    .mobile-bar{
+        position:fixed;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:8px;
+        bottom:0;
+        left:0;
+        width:100%;
+        padding:9px;
+        background:rgba(4,16,30,.96);
+        backdrop-filter:blur(12px);
+        z-index:998;
+    }
+
+    .mobile-bar a{
+        padding:13px;
+        border-radius:11px;
+        text-align:center;
+        color:white;
+        font-size:13px;
+        font-weight:900;
+    }
+
+    .mobile-call{
+        background:#087cff;
+    }
+
+    .mobile-whatsapp{
+        background:#18c879;
     }
 }
 </style>
@@ -1060,122 +1069,111 @@ footer{
 <!-- ================= HEADER ================= -->
 
 <header>
-<div class="container navbar">
+<nav class="navbar">
 
-    <a href="#" class="logo">
-        <div class="logo-icon">R</div>
-        <div>
-            <h1>RAJ RAFREGIRETINON</h1>
-            <small>AC & Home Appliance Service</small>
-        </div>
-    </a>
-
-    <nav class="nav-links">
-        <a href="#services">Services</a>
-        <a href="#brands">Brands</a>
-        <a href="#booking">Booking</a>
-        <a href="#location">Location</a>
-    </nav>
-
-    <div class="nav-actions">
-        <a class="call-btn" href="tel:+919933869133">☎ Call</a>
-        <a class="whatsapp-btn" href="https://wa.me/919933869133" target="_blank">WhatsApp</a>
+<a href="#home" class="logo">
+    <div class="logo-icon">R</div>
+    <div class="logo-text">
+        <strong>Raj Rafregiretinon</strong>
+        <span>Home Appliance Service</span>
     </div>
+</a>
 
+<div class="nav-links">
+    <a href="#home">Home</a>
+    <a href="#services">Services</a>
+    <a href="#about">About</a>
+    <a href="#booking">Booking</a>
+    <a href="#location">Location</a>
 </div>
+
+<div class="nav-buttons">
+    <a class="btn btn-outline" href="tel:+919933869133">☎ Call</a>
+    <a class="btn btn-primary" href="https://wa.me/919933869133" target="_blank">WhatsApp</a>
+</div>
+
+</nav>
 </header>
 
 
 <!-- ================= HERO ================= -->
 
-<section class="hero">
+<section class="hero" id="home">
 
-<div class="container hero-inner">
+<div class="hero-container">
 
-    <div class="hero-content">
+<div class="hero-content reveal">
 
-        <div class="badge">
-            <span class="dot"></span>
-            Professional Doorstep Service
-        </div>
+<div class="badge">
+    ● Professional Home Appliance Service
+</div>
 
-        <h2>
-            Expert Care for Your
-            <span>Home Appliances.</span>
-        </h2>
+<h1>
+    Expert Care For Your
+    <span>Home Appliances</span>
+</h1>
 
-        <p>
-            Professional repair, servicing and maintenance
-            for AC, Refrigerator, Cooler and Washing Machine.
-            Convenient doorstep service with easy WhatsApp booking.
-        </p>
+<p>
+    AC, Refrigerator, Cooler and Washing Machine service
+    ke liye direct WhatsApp booking karein. Simple,
+    fast aur professional service request system.
+</p>
 
-        <div class="hero-buttons">
+<div class="hero-actions">
 
-            <a class="hero-btn primary"
-               href="#booking">
-                💬 Book a Service
-            </a>
+<a href="#booking" class="btn btn-primary">
+    📅 Book a Service
+</a>
 
-            <a class="hero-btn secondary"
-               href="https://maps.app.goo.gl/MkHDj1rctR1S8VAw9?g_st=ac"
-               target="_blank">
-                📍 Find Our Location
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <div class="hero-card">
-
-        <div class="hero-card-icon">🛠️</div>
-
-        <h3>Complete Appliance Care</h3>
-
-        <p>
-            AC • Refrigerator • Cooler •
-            Washing Machine
-        </p>
-
-    </div>
+<a href="https://wa.me/919933869133?text=Hello%20Raj%20Rafregiretinon%2C%20mujhe%20service%20book%20karni%20hai."
+target="_blank"
+class="btn btn-outline">
+    💬 WhatsApp Now
+</a>
 
 </div>
-</section>
+
+<div class="hero-info">
+
+<div class="info-item">
+    <span class="info-dot"></span>
+    WhatsApp Booking
+</div>
+
+<div class="info-item">
+    <span class="info-dot"></span>
+    Home Appliance Service
+</div>
+
+<div class="info-item">
+    <span class="info-dot"></span>
+    Multiple Brands
+</div>
+
+</div>
+
+</div>
 
 
-<!-- ================= QUICK SERVICES ================= -->
+<div class="hero-card reveal">
 
-<section class="quick">
+<div class="hero-appliance">
+    ❄️
+</div>
 
-<div class="container">
+<div class="hero-card-bottom">
 
-<div class="quick-grid">
+<div class="mini-card">
+    <small>Service Categories</small>
+    <strong>04+</strong>
+</div>
 
-    <div class="quick-item">
-        <div>❄️</div>
-        <h3>AC Service</h3>
-        <p>Repair & Maintenance</p>
-    </div>
+<div class="mini-card">
+    <small>Booking Method</small>
+    <strong>WhatsApp</strong>
+</div>
 
-    <div class="quick-item">
-        <div>🧊</div>
-        <h3>Refrigerator</h3>
-        <p>Repair & Cooling</p>
-    </div>
-
-    <div class="quick-item">
-        <div>💨</div>
-        <h3>Cooler</h3>
-        <p>Service & Maintenance</p>
-    </div>
-
-    <div class="quick-item">
-        <div>🧺</div>
-        <h3>Washing Machine</h3>
-        <p>Repair & Service</p>
-    </div>
+</div>
 
 </div>
 
@@ -1185,40 +1183,22 @@ footer{
 
 <!-- ================= SERVICES ================= -->
 
-<section class="section services" id="services">
+<section class="services" id="services">
 
 <div class="container">
 
-<div class="section-head">
-    <span class="kicker">OUR SERVICES</span>
-    <h2>Complete Home Appliance Services</h2>
+<div class="section-heading reveal">
+    <div class="tag">Our Services</div>
+    <h2>Complete Appliance Care</h2>
     <p>
-        Professional service and repair solutions
-        for your essential home appliances.
+        Different home appliances ke liye service request
+        ek hi place se submit karein.
     </p>
 </div>
 
 
 <div class="service-grid">
 
-    <div class="service-card">
-
-        <div class="service-icon">❄️</div>
-
-        <h3>AC Service & Repair</h3>
-
-        <p>
-            Complete AC servicing, repair,
-            cooling solutions and maintenance.
-        </p>
-
-        <ul class="service-list">
-            <li>✓ General AC Service</li>
-            <li>✓ Cooling Problem</li>
-            <li>✓ Gas Related Service</li>
-            <li>✓ Installation & Repair</li>
-        </ul>
-
-        <a class="service-link"
-           href="#booking"
-           onclick="selectService('AC Service & Re
+<div class="service-card reveal">
+    <div class="service-icon">❄️</div>
+    <h
