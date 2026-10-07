@@ -1,532 +1,1224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Raj Rafregiretinon | AC & Home Appliance Service</title>
-
-    <meta name="description"
-        content="Professional AC, Refrigerator, Cooler and Washing Machine service at your doorstep. Raj Rafregiretinon.">
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        body {
-            background: #f5f9fc;
-            color: #12212f;
-        }
-
-        /* HEADER */
-
-        header {
-            width: 100%;
-            background: rgba(255,255,255,0.96);
-            border-bottom: 1px solid #e5edf3;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .navbar {
-            max-width: 1200px;
-            margin: auto;
-            padding: 18px 22px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 20px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo-icon {
-            width: 46px;
-            height: 46px;
-            border-radius: 12px;
-            background: linear-gradient(135deg, #0066ff, #00b8ff);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 23px;
-            font-weight: bold;
-            box-shadow: 0 8px 20px rgba(0,102,255,0.22);
-        }
-
-        .logo-text h1 {
-            font-size: 19px;
-            color: #0b2942;
-            letter-spacing: 0.5px;
-        }
-
-        .logo-text span {
-            font-size: 11px;
-            color: #718096;
-        }
-
-        .nav-buttons {
-            display: flex;
-            gap: 10px;
-        }
-
-        .nav-btn {
-            text-decoration: none;
-            padding: 11px 17px;
-            border-radius: 9px;
-            font-size: 14px;
-            font-weight: bold;
-        }
-
-        .call-btn {
-            color: #0066ff;
-            border: 1px solid #cfe2ff;
-            background: #f5f9ff;
-        }
-
-        .whatsapp-btn {
-            background: #18b957;
-            color: white;
-            box-shadow: 0 7px 18px rgba(24,185,87,0.2);
-        }
-
-        /* HERO */
-
-        .hero {
-            min-height: 650px;
-            position: relative;
-            overflow: hidden;
-            background:
-                radial-gradient(circle at 85% 20%, rgba(0,184,255,0.18), transparent 28%),
-                radial-gradient(circle at 10% 80%, rgba(0,102,255,0.10), transparent 30%),
-                linear-gradient(135deg, #061b31 0%, #083b63 55%, #0066aa 100%);
-        }
-
-        .hero-container {
-            max-width: 1200px;
-            min-height: 650px;
-            margin: auto;
-            padding: 70px 22px;
-            display: flex;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero-content {
-            max-width: 700px;
-        }
-
-        .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 9px 14px;
-            background: rgba(255,255,255,0.11);
-            border: 1px solid rgba(255,255,255,0.18);
-            border-radius: 50px;
-            color: #dff6ff;
-            font-size: 13px;
-            margin-bottom: 22px;
-            backdrop-filter: blur(10px);
-        }
-
-        .badge-dot {
-            width: 8px;
-            height: 8px;
-            border-radius: 50%;
-            background: #27e477;
-            box-shadow: 0 0 10px #27e477;
-        }
-
-        .hero h2 {
-            color: white;
-            font-size: clamp(40px, 6vw, 72px);
-            line-height: 1.05;
-            letter-spacing: -2px;
-            margin-bottom: 24px;
-        }
-
-        .hero h2 span {
-            color: #53d5ff;
-        }
-
-        .hero p {
-            color: #d7e8f5;
-            font-size: 18px;
-            line-height: 1.7;
-            max-width: 650px;
-            margin-bottom: 32px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 13px;
-        }
-
-        .hero-btn {
-            text-decoration: none;
-            padding: 15px 22px;
-            border-radius: 11px;
-            font-size: 15px;
-            font-weight: bold;
-            transition: 0.25s ease;
-        }
-
-        .hero-btn:hover {
-            transform: translateY(-3px);
-        }
-
-        .primary-btn {
-            background: #18b957;
-            color: white;
-            box-shadow: 0 12px 25px rgba(0,0,0,0.20);
-        }
-
-        .secondary-btn {
-            background: rgba(255,255,255,0.10);
-            color: white;
-            border: 1px solid rgba(255,255,255,0.25);
-            backdrop-filter: blur(10px);
-        }
-
-        /* HERO DECORATION */
-
-        .hero-circle {
-            position: absolute;
-            border-radius: 50%;
-            border: 1px solid rgba(255,255,255,0.10);
-        }
-
-        .circle-one {
-            width: 420px;
-            height: 420px;
-            right: -120px;
-            top: 80px;
-        }
-
-        .circle-two {
-            width: 280px;
-            height: 280px;
-            right: 40px;
-            top: 150px;
-        }
-
-        .service-card-preview {
-            position: absolute;
-            right: 7%;
-            bottom: 70px;
-            width: 230px;
-            padding: 22px;
-            border-radius: 20px;
-            background: rgba(255,255,255,0.11);
-            border: 1px solid rgba(255,255,255,0.20);
-            backdrop-filter: blur(15px);
-            color: white;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.18);
-        }
-
-        .service-card-preview .big-icon {
-            font-size: 42px;
-            margin-bottom: 12px;
-        }
-
-        .service-card-preview h3 {
-            font-size: 18px;
-            margin-bottom: 7px;
-        }
-
-        .service-card-preview p {
-            font-size: 13px;
-            color: #cfe8f5;
-            margin: 0;
-            line-height: 1.5;
-        }
-
-        /* QUICK SERVICES */
-
-        .quick-services {
-            max-width: 1100px;
-            margin: -45px auto 0;
-            padding: 0 20px;
-            position: relative;
-            z-index: 5;
-        }
-
-        .quick-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 18px 45px rgba(18,50,75,0.12);
-            overflow: hidden;
-        }
-
-        .quick-item {
-            padding: 24px 18px;
-            text-align: center;
-            border-right: 1px solid #edf2f6;
-        }
-
-        .quick-item:last-child {
-            border-right: none;
-        }
-
-        .quick-icon {
-            font-size: 29px;
-            margin-bottom: 10px;
-        }
-
-        .quick-item h3 {
-            font-size: 15px;
-            color: #17344b;
-        }
-
-        .quick-item p {
-            font-size: 12px;
-            color: #788898;
-            margin-top: 5px;
-        }
-
-        /* MOBILE */
-
-        @media (max-width: 850px) {
-
-            .service-card-preview {
-                display: none;
-            }
-
-            .hero {
-                min-height: 600px;
-            }
-
-            .hero-container {
-                min-height: 600px;
-            }
-
-            .quick-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .quick-item:nth-child(2) {
-                border-right: none;
-            }
-
-            .quick-item:nth-child(1),
-            .quick-item:nth-child(2) {
-                border-bottom: 1px solid #edf2f6;
-            }
-        }
-
-        @media (max-width: 600px) {
-
-            .navbar {
-                padding: 13px 15px;
-            }
-
-            .logo-text h1 {
-                font-size: 15px;
-            }
-
-            .logo-text span {
-                font-size: 9px;
-            }
-
-            .logo-icon {
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
-            }
-
-            .call-btn {
-                display: none;
-            }
-
-            .nav-btn {
-                padding: 10px 13px;
-                font-size: 12px;
-            }
-
-            .hero-container {
-                padding: 65px 20px 100px;
-            }
-
-            .hero h2 {
-                font-size: 42px;
-                letter-spacing: -1.5px;
-            }
-
-            .hero p {
-                font-size: 15px;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-            }
-
-            .hero-btn {
-                text-align: center;
-                width: 100%;
-            }
-
-            .quick-services {
-                margin-top: -35px;
-            }
-
-            .quick-item {
-                padding: 20px 10px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Raj Rafregiretinon | AC & Home Appliance Service</title>
+
+<meta name="description"
+content="Raj Rafregiretinon provides professional AC, refrigerator, cooler and washing machine repair and service. Book doorstep service on WhatsApp.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#f5f9fc;
+    color:#102b42;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+}
+
+.container{
+    width:min(1180px,92%);
+    margin:auto;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:9999;
+    background:rgba(255,255,255,.96);
+    backdrop-filter:blur(14px);
+    border-bottom:1px solid #e5edf3;
+}
+
+.navbar{
+    min-height:76px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:11px;
+}
+
+.logo-icon{
+    width:46px;
+    height:46px;
+    border-radius:13px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:23px;
+    font-weight:900;
+    background:linear-gradient(135deg,#0066ff,#00b8ff);
+    box-shadow:0 8px 22px rgba(0,102,255,.22);
+}
+
+.logo h1{
+    font-size:18px;
+    letter-spacing:.5px;
+    color:#092842;
+}
+
+.logo small{
+    display:block;
+    color:#7a8996;
+    font-size:10px;
+    margin-top:3px;
+}
+
+.nav-links{
+    display:flex;
+    align-items:center;
+    gap:25px;
+}
+
+.nav-links a{
+    color:#405568;
+    font-size:13px;
+    font-weight:700;
+}
+
+.nav-links a:hover{
+    color:#006cff;
+}
+
+.nav-actions{
+    display:flex;
+    gap:9px;
+}
+
+.call-btn,
+.whatsapp-btn{
+    padding:11px 16px;
+    border-radius:9px;
+    font-size:13px;
+    font-weight:800;
+}
+
+.call-btn{
+    color:#006cff;
+    background:#eef6ff;
+    border:1px solid #d7e8ff;
+}
+
+.whatsapp-btn{
+    color:white;
+    background:#19b957;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    position:relative;
+    min-height:650px;
+    overflow:hidden;
+    background:
+    radial-gradient(circle at 85% 20%,rgba(0,190,255,.25),transparent 28%),
+    radial-gradient(circle at 10% 85%,rgba(0,110,255,.16),transparent 32%),
+    linear-gradient(135deg,#061a2e,#073d67 58%,#006da8);
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    border:1px solid rgba(255,255,255,.09);
+    border-radius:50%;
+    right:-160px;
+    top:80px;
+}
+
+.hero-inner{
+    min-height:650px;
+    display:flex;
+    align-items:center;
+    position:relative;
+    z-index:2;
+}
+
+.hero-content{
+    max-width:720px;
+}
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:9px 15px;
+    border-radius:50px;
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.18);
+    color:#dff6ff;
+    font-size:12px;
+    font-weight:700;
+    margin-bottom:22px;
+}
+
+.dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#2be879;
+    box-shadow:0 0 12px #2be879;
+}
+
+.hero h2{
+    color:white;
+    font-size:clamp(42px,6vw,72px);
+    line-height:1.02;
+    letter-spacing:-2.5px;
+    margin-bottom:24px;
+}
+
+.hero h2 span{
+    color:#56d8ff;
+}
+
+.hero p{
+    max-width:650px;
+    color:#d7e8f5;
+    font-size:17px;
+    line-height:1.75;
+    margin-bottom:32px;
+}
+
+.hero-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.hero-btn{
+    padding:15px 21px;
+    border-radius:11px;
+    font-size:14px;
+    font-weight:800;
+    transition:.25s;
+}
+
+.hero-btn:hover{
+    transform:translateY(-3px);
+}
+
+.primary{
+    color:white;
+    background:#19b957;
+    box-shadow:0 12px 28px rgba(0,0,0,.18);
+}
+
+.secondary{
+    color:white;
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.25);
+}
+
+.hero-card{
+    position:absolute;
+    right:4%;
+    bottom:85px;
+    width:235px;
+    padding:25px;
+    border-radius:22px;
+    background:rgba(255,255,255,.1);
+    border:1px solid rgba(255,255,255,.2);
+    backdrop-filter:blur(15px);
+    color:white;
+}
+
+.hero-card-icon{
+    font-size:43px;
+    margin-bottom:12px;
+}
+
+.hero-card h3{
+    font-size:18px;
+    margin-bottom:8px;
+}
+
+.hero-card p{
+    margin:0;
+    font-size:12px;
+    color:#cde5f3;
+    line-height:1.6;
+}
+
+/* ================= QUICK BAR ================= */
+
+.quick{
+    position:relative;
+    z-index:10;
+    margin-top:-42px;
+}
+
+.quick-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    background:white;
+    border-radius:20px;
+    box-shadow:0 18px 45px rgba(18,50,75,.12);
+    overflow:hidden;
+}
+
+.quick-item{
+    padding:24px 15px;
+    text-align:center;
+    border-right:1px solid #edf2f6;
+}
+
+.quick-item:last-child{
+    border:0;
+}
+
+.quick-item div{
+    font-size:29px;
+    margin-bottom:9px;
+}
+
+.quick-item h3{
+    font-size:14px;
+}
+
+.quick-item p{
+    color:#7c8b97;
+    font-size:11px;
+    margin-top:5px;
+}
+
+/* ================= GENERAL SECTIONS ================= */
+
+.section{
+    padding:100px 0;
+}
+
+.section-head{
+    max-width:720px;
+    text-align:center;
+    margin:0 auto 48px;
+}
+
+.kicker{
+    color:#0072ff;
+    font-size:11px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.section-head h2{
+    color:#102b42;
+    font-size:clamp(30px,5vw,45px);
+    margin:12px 0;
+}
+
+.section-head p{
+    color:#718096;
+    line-height:1.7;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#f7fafc;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.service-card{
+    padding:28px 23px;
+    background:white;
+    border:1px solid #e6eef4;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(20,60,90,.055);
+    transition:.3s;
+}
+
+.service-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 20px 45px rgba(20,60,90,.12);
+}
+
+.service-icon{
+    width:59px;
+    height:59px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:16px;
+    background:#eef7ff;
+    font-size:29px;
+    margin-bottom:19px;
+}
+
+.service-card h3{
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.service-card p{
+    color:#718096;
+    font-size:13px;
+    line-height:1.65;
+    margin-bottom:18px;
+}
+
+.service-list{
+    list-style:none;
+    margin-bottom:20px;
+}
+
+.service-list li{
+    color:#43596a;
+    font-size:12px;
+    margin:8px 0;
+}
+
+.service-link{
+    color:#0072ff;
+    font-size:12px;
+    font-weight:800;
+}
+
+/* ================= OTHER SERVICES ================= */
+
+.other-services{
+    margin-top:25px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+}
+
+.tag{
+    padding:10px 15px;
+    border-radius:50px;
+    background:white;
+    border:1px solid #e1eaf1;
+    color:#405568;
+    font-size:12px;
+    font-weight:700;
+}
+
+/* ================= BRANDS ================= */
+
+.brands{
+    background:white;
+}
+
+.brand-grid{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.brand{
+    text-align:center;
+    padding:30px 15px;
+    border:1px solid #e4edf3;
+    border-radius:18px;
+    background:#fbfdff;
+    transition:.3s;
+}
+
+.brand:hover{
+    transform:translateY(-5px);
+    box-shadow:0 15px 35px rgba(20,60,90,.09);
+}
+
+.brand-name{
+    font-size:21px;
+    font-weight:900;
+    margin-bottom:9px;
+}
+
+.brand:nth-child(1) .brand-name{color:#1268d9}
+.brand:nth-child(2) .brand-name{color:#1767c9}
+.brand:nth-child(3) .brand-name{color:#0099d7}
+.brand:nth-child(4) .brand-name{color:#1474c4}
+
+.brand p{
+    color:#7a8996;
+    font-size:11px;
+}
+
+/* ================= WHY US ================= */
+
+.why{
+    background:#071f35;
+    color:white;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+}
+
+.why h2{
+    font-size:clamp(35px,5vw,55px);
+    line-height:1.07;
+    margin:14px 0 20px;
+}
+
+.why-text{
+    color:#bdd0df;
+    line-height:1.7;
+    max-width:480px;
+    margin-bottom:28px;
+}
+
+.feature-grid{
+    display:grid;
+    gap:13px;
+}
+
+.feature{
+    display:flex;
+    gap:15px;
+    padding:19px;
+    border-radius:15px;
+    background:rgba(255,255,255,.055);
+    border:1px solid rgba(255,255,255,.08);
+}
+
+.feature-icon{
+    min-width:48px;
+    height:48px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:12px;
+    background:rgba(255,255,255,.08);
+    font-size:22px;
+}
+
+.feature h3{
+    font-size:14px;
+    margin-bottom:5px;
+}
+
+.feature p{
+    color:#aac1d1;
+    font-size:11px;
+    line-height:1.5;
+}
+
+/* ================= BOOKING ================= */
+
+.booking{
+    background:#f5f9fc;
+}
+
+.booking-wrapper{
+    max-width:1050px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:.8fr 1.2fr;
+    background:white;
+    border-radius:25px;
+    overflow:hidden;
+    box-shadow:0 20px 55px rgba(20,60,90,.1);
+}
+
+.booking-info{
+    padding:45px;
+    background:linear-gradient(145deg,#06203a,#0068a5);
+    color:white;
+}
+
+.booking-info h2{
+    font-size:35px;
+    line-height:1.15;
+    margin:13px 0 17px;
+}
+
+.booking-info p{
+    color:#cce1ed;
+    line-height:1.7;
+    font-size:13px;
+}
+
+.contact-info{
+    margin-top:30px;
+}
+
+.contact-row{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    margin:17px 0;
+    color:#e6f4fb;
+    font-size:13px;
+}
+
+.contact-icon{
+    width:38px;
+    height:38px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:rgba(255,255,255,.1);
+}
+
+.booking-form{
+    padding:45px;
+}
+
+.booking-form h3{
+    font-size:25px;
+    margin-bottom:6px;
+}
+
+.booking-form .subtitle{
+    color:#7a8996;
+    font-size:12px;
+    margin-bottom:25px;
+}
+
+.form-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
+
+.field{
+    display:flex;
+    flex-direction:column;
+    gap:7px;
+}
+
+.field.full{
+    grid-column:1/-1;
+}
+
+.field label{
+    font-size:11px;
+    font-weight:800;
+    color:#43596a;
+}
+
+.field input,
+.field select,
+.field textarea{
+    width:100%;
+    padding:13px;
+    border:1px solid #dce6ed;
+    border-radius:9px;
+    outline:none;
+    background:#fbfdff;
+    color:#213b50;
+    font-size:13px;
+}
+
+.field input:focus,
+.field select:focus,
+.field textarea:focus{
+    border-color:#0072ff;
+    box-shadow:0 0 0 3px rgba(0,114,255,.08);
+}
+
+.field textarea{
+    min-height:90px;
+    resize:vertical;
+}
+
+.submit{
+    width:100%;
+    margin-top:18px;
+    padding:15px;
+    border:0;
+    border-radius:10px;
+    background:#19b957;
+    color:white;
+    font-size:14px;
+    font-weight:900;
+    cursor:pointer;
+}
+
+/* ================= LOCATION ================= */
+
+.location{
+    background:white;
+}
+
+.location-card{
+    max-width:1000px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    border-radius:22px;
+    overflow:hidden;
+    border:1px solid #e4edf3;
+    box-shadow:0 15px 40px rgba(20,60,90,.08);
+}
+
+.map-area{
+    min-height:340px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:30px;
+    background:
+    linear-gradient(rgba(0,110,170,.78),rgba(0,50,90,.88)),
+    repeating-linear-gradient(
+        45deg,
+        #dcebf3,
+        #dcebf3 10px,
+        #d4e4ed 10px,
+        #d4e4ed 20px
+    );
+    color:white;
+}
+
+.map-pin{
+    font-size:55px;
+    margin-bottom:10px;
+}
+
+.map-area h3{
+    font-size:24px;
+}
+
+.map-area p{
+    color:#d8edf6;
+    font-size:12px;
+    margin:10px 0 20px;
+}
+
+.map-button{
+    display:inline-block;
+    padding:12px 18px;
+    border-radius:9px;
+    background:white;
+    color:#0067a5;
+    font-size:12px;
+    font-weight:900;
+}
+
+.location-info{
+    padding:40px;
+}
+
+.location-info h3{
+    font-size:27px;
+    margin-bottom:12px;
+}
+
+.location-info > p{
+    color:#718096;
+    font-size:13px;
+    line-height:1.7;
+}
+
+.info-box{
+    margin-top:20px;
+    padding:16px;
+    border-radius:12px;
+    background:#f5f9fc;
+}
+
+.info-box strong{
+    display:block;
+    font-size:12px;
+    margin-bottom:6px;
+}
+
+.info-box span{
+    color:#718096;
+    font-size:12px;
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+    background:#f7fafc;
+}
+
+.faq-list{
+    max-width:800px;
+    margin:auto;
+}
+
+details{
+    background:white;
+    border:1px solid #e3ebf1;
+    border-radius:12px;
+    margin-bottom:11px;
+    padding:18px 20px;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:800;
+    font-size:13px;
+    color:#18364d;
+}
+
+details p{
+    color:#718096;
+    font-size:12px;
+    line-height:1.7;
+    margin-top:12px;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    padding:80px 20px;
+    background:linear-gradient(135deg,#0066ff,#00a8dc);
+    text-align:center;
+    color:white;
+}
+
+.cta h2{
+    font-size:clamp(30px,5vw,48px);
+    margin-bottom:12px;
+}
+
+.cta p{
+    color:#dff5ff;
+    font-size:14px;
+    margin-bottom:25px;
+}
+
+.cta-button{
+    display:inline-block;
+    padding:14px 22px;
+    border-radius:10px;
+    background:#19b957;
+    color:white;
+    font-weight:900;
+    font-size:13px;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#061827;
+    color:white;
+    padding:45px 0 20px;
+}
+
+.footer-grid{
+    display:grid;
+    grid-template-columns:1.5fr 1fr 1fr;
+    gap:40px;
+    padding-bottom:35px;
+}
+
+.footer-brand h2{
+    font-size:19px;
+}
+
+.footer-brand p{
+    color:#8fa6b6;
+    font-size:12px;
+    line-height:1.7;
+    max-width:350px;
+    margin-top:12px;
+}
+
+.footer-column h3{
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.footer-column a{
+    display:block;
+    color:#8fa6b6;
+    font-size:12px;
+    margin:9px 0;
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.08);
+    padding-top:20px;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+    color:#718796;
+    font-size:10px;
+}
+
+.footer-bottom a{
+    color:#53d5ff;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.floating{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:999;
+    display:flex;
+    flex-direction:column;
+    gap:9px;
+}
+
+.float-btn{
+    width:51px;
+    height:51px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    color:white;
+    font-size:21px;
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+}
+
+.float-wa{
+    background:#19b957;
+}
+
+.float-call{
+    background:#006cff;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+    .nav-links{
+        display:none;
+    }
+
+    .service-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .brand-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .hero-card{
+        display:none;
+    }
+
+    .why-grid{
+        grid-template-columns:1fr;
+        gap:45px;
+    }
+
+    .booking-wrapper{
+        grid-template-columns:1fr;
+    }
+
+    .location-card{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:650px){
+
+    .navbar{
+        min-height:68px;
+    }
+
+    .logo h1{
+        font-size:14px;
+    }
+
+    .logo small{
+        font-size:8px;
+    }
+
+    .logo-icon{
+        width:40px;
+        height:40px;
+    }
+
+    .call-btn{
+        display:none;
+    }
+
+    .whatsapp-btn{
+        padding:10px 12px;
+        font-size:11px;
+    }
+
+    .hero,
+    .hero-inner{
+        min-height:600px;
+    }
+
+    .hero h2{
+        font-size:43px;
+    }
+
+    .hero p{
+        font-size:14px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+    }
+
+    .hero-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .quick{
+        margin-top:-32px;
+    }
+
+    .quick-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .quick-item{
+        padding:20px 8px;
+    }
+
+    .quick-item:nth-child(1),
+    .quick-item:nth-child(2){
+        border-bottom:1px solid #edf2f6;
+    }
+
+    .quick-item:nth-child(2){
+        border-right:0;
+    }
+
+    .section{
+        padding:70px 0;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .brand-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .booking-info,
+    .booking-form{
+        padding:28px 22px;
+    }
+
+    .form-grid{
+        grid-template-columns:1fr;
+    }
+
+    .field.full{
+        grid-column:auto;
+    }
+
+    .location-info{
+        padding:28px 22px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-bottom{
+        flex-direction:column;
+    }
+}
+</style>
 </head>
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 
 <header>
-    <nav class="navbar">
+<div class="container navbar">
 
-        <div class="logo">
-
-            <div class="logo-icon">
-                R
-            </div>
-
-            <div class="logo-text">
-                <h1>RAJ RAFREGIRETINON</h1>
-                <span>AC & Home Appliance Service</span>
-            </div>
-
+    <a href="#" class="logo">
+        <div class="logo-icon">R</div>
+        <div>
+            <h1>RAJ RAFREGIRETINON</h1>
+            <small>AC & Home Appliance Service</small>
         </div>
+    </a>
 
-        <div class="nav-buttons">
-
-            <a class="nav-btn call-btn"
-               href="tel:+919933869133">
-                ☎ Call Now
-            </a>
-
-            <a class="nav-btn whatsapp-btn"
-               href="https://wa.me/919933869133"
-               target="_blank">
-                WhatsApp
-            </a>
-
-        </div>
-
+    <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#brands">Brands</a>
+        <a href="#booking">Booking</a>
+        <a href="#location">Location</a>
     </nav>
+
+    <div class="nav-actions">
+        <a class="call-btn" href="tel:+919933869133">☎ Call</a>
+        <a class="whatsapp-btn" href="https://wa.me/919933869133" target="_blank">WhatsApp</a>
+    </div>
+
+</div>
 </header>
 
 
-<!-- HERO SECTION -->
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
-    <div class="hero-circle circle-one"></div>
-    <div class="hero-circle circle-two"></div>
+<div class="container hero-inner">
 
-    <div class="hero-container">
+    <div class="hero-content">
 
-        <div class="hero-content">
-
-            <div class="badge">
-                <span class="badge-dot"></span>
-                Professional Doorstep Service
-            </div>
-
-            <h2>
-                Expert Care for Your
-                <span>Home Appliances.</span>
-            </h2>
-
-            <p>
-                Reliable repair, servicing and maintenance for
-                AC, Refrigerator, Cooler and Washing Machine.
-                Professional service at your doorstep.
-            </p>
-
-            <div class="hero-buttons">
-
-                <a class="hero-btn primary-btn"
-                   href="https://wa.me/919933869133?text=Hello%20Raj%20Rafregiretinon,%20I%20want%20to%20book%20a%20service."
-                   target="_blank">
-                    💬 Book Service on WhatsApp
-                </a>
-
-                <a class="hero-btn secondary-btn"
-                   href="https://maps.app.goo.gl/MkHDj1rctR1S8VAw9?g_st=ac"
-                   target="_blank">
-                    📍 View Our Location
-                </a>
-
-            </div>
-
+        <div class="badge">
+            <span class="dot"></span>
+            Professional Doorstep Service
         </div>
 
+        <h2>
+            Expert Care for Your
+            <span>Home Appliances.</span>
+        </h2>
 
-        <div class="service-card-preview">
+        <p>
+            Professional repair, servicing and maintenance
+            for AC, Refrigerator, Cooler and Washing Machine.
+            Convenient doorstep service with easy WhatsApp booking.
+        </p>
 
-            <div class="big-icon">❄️</div>
+        <div class="hero-buttons">
 
-            <h3>All Appliance Service</h3>
+            <a class="hero-btn primary"
+               href="#booking">
+                💬 Book a Service
+            </a>
 
-            <p>
-                AC • Refrigerator • Cooler •
-                Washing Machine
-            </p>
+            <a class="hero-btn secondary"
+               href="https://maps.app.goo.gl/MkHDj1rctR1S8VAw9?g_st=ac"
+               target="_blank">
+                📍 Find Our Location
+            </a>
 
         </div>
 
     </div>
 
-</section>
 
+    <div class="hero-card">
 
-<!-- QUICK SERVICE BAR -->
+        <div class="hero-card-icon">🛠️</div>
 
-<section class="quick-services">
+        <h3>Complete Appliance Care</h3>
 
-    <div class="quick-grid">
-
-        <div class="quick-item">
-            <div class="quick-icon">❄️</div>
-            <h3>AC Service</h3>
-            <p>Repair & Maintenance</p>
-        </div>
-
-        <div class="quick-item">
-            <div class="quick-icon">🧊</div>
-            <h3>Refrigerator</h3>
-            <p>Repair & Cooling</p>
-        </div>
-
-        <div class="quick-item">
-            <div class="quick-icon">💨</div>
-            <h3>Cooler</h3>
-            <p>Service & Maintenance</p>
-        </div>
-
-        <div class="quick-item">
-            <div class="quick-icon">🧺</div>
-            <h3>Washing Machine</h3>
-            <p>Repair & Service</p>
-        </div>
+        <p>
+            AC • Refrigerator • Cooler •
+            Washing Machine
+        </p>
 
     </div>
 
+</div>
 </section>
 
 
-</body>
-</html>
+<!-- ================= QUICK SERVICES ================= -->
+
+<section class="quick">
+
+<div class="container">
+
+<div class="quick-grid">
+
+    <div class="quick-item">
+        <div>❄️</div>
+        <h3>AC Service</h3>
+        <p>Repair & Maintenance</p>
+    </div>
+
+    <div class="quick-item">
+        <div>🧊</div>
+        <h3>Refrigerator</h3>
+        <p>Repair & Cooling</p>
+    </div>
+
+    <div class="quick-item">
+        <div>💨</div>
+        <h3>Cooler</h3>
+        <p>Service & Maintenance</p>
+    </div>
+
+    <div class="quick-item">
+        <div>🧺</div>
+        <h3>Washing Machine</h3>
+        <p>Repair & Service</p>
+    </div>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section services" id="services">
+
+<div class="container">
+
+<div class="section-head">
+    <span class="kicker">OUR SERVICES</span>
+    <h2>Complete Home Appliance Services</h2>
+    <p>
+        Professional service and repair solutions
+        for your essential home appliances.
+    </p>
+</div>
+
+
+<div class="service-grid">
+
+    <div class="service-card">
+
+        <div class="service-icon">❄️</div>
+
+        <h3>AC Service & Repair</h3>
+
+        <p>
+            Complete AC servicing, repair,
+            cooling solutions and maintenance.
+        </p>
+
+        <ul class="service-list">
+            <li>✓ General AC Service</li>
+            <li>✓ Cooling Problem</li>
+            <li>✓ Gas Related Service</li>
+            <li>✓ Installation & Repair</li>
+        </ul>
+
+        <a class="service-link"
+           href="#booking"
+           onclick="selectService('AC Service & Re
