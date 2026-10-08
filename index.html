@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Raj Rafregiretinon | AC & Appliance Service</title>
+
+  <meta name="description"
+        content="Raj Rafregiretinon - Professional AC, Refrigerator, Cooler and Washing Machine repair and service. Book doorstep service on WhatsApp.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f8fc;
+      color: #10233f;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(7, 24, 48, 0.97);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 72px;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: white;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: .5px;
+    }
+
+    .logo span {
+      color: #19b5ff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 27px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: #dcecff;
+      font-size: 14px;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .nav-links a:hover {
+      color: #20c7ff;
+    }
+
+    .nav-call {
+      background: #13bdf4;
+      color: #001a2c !important;
+      padding: 11px 17px;
+      border-radius: 10px;
+      font-weight: 800 !important;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero {
+      min-height: 650px;
+      background:
+        linear-gradient(110deg, rgba(3,17,35,.97), rgba(5,46,83,.82)),
+        radial-gradient(circle at 80% 20%, #19bfff, transparent 30%);
+      position: relative;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      right: -170px;
+      top: -150px;
+      border-radius: 50%;
+      background: rgba(21,190,255,.13);
+      filter: blur(3px);
+    }
+
+    .hero-content {
+      width: min(1200px, 100%);
+      margin: auto;
+      padding: 80px 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-block;
+      color: #7bddff;
+      border: 1px solid rgba(90,210,255,.35);
+      background: rgba(13,184,255,.08);
+      padding: 9px 15px;
+      border-radius: 30px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      color: white;
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 1.04;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #20c7ff;
+    }
+
+    .hero p {
+      max-width: 650px;
+      color: #c8d9ea;
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 13px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 15px 21px;
+      border-radius: 11px;
+      font-weight: 800;
+      font-size: 14px;
+      transition: .3s;
+    }
+
+    .btn:hover {
+      transform: translateY(-3px);
+    }
+
+    .btn-whatsapp {
+      background: #20c76a;
+      color: white;
+      box-shadow: 0 10px 30px rgba(32,199,106,.2);
+    }
+
+    .btn-call {
+      background: white;
+      color: #08223d;
+    }
+
+    .btn-map {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.2);
+      color: white;
+    }
+
+    /* ================= TRUST BAR ================= */
+
+    .trust {
+      background: white;
+      border-bottom: 1px solid #e5edf5;
+    }
+
+    .trust-grid {
+      max-width: 1200px;
+      margin: auto;
+      padding: 25px 20px;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 20px;
+    }
+
+    .trust-item {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 700;
+      color: #27415e;
+    }
+
+    .trust-item strong {
+      display: block;
+      color: #0b9fd5;
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    /* ================= SECTION ================= */
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 85px 20px;
+    }
+
+    .section-heading {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 45px;
+    }
+
+    .section-heading small {
+      color: #08a9df;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .section-heading h2 {
+      margin-top: 10px;
+      font-size: clamp(30px,4vw,44px);
+      color: #092542;
+    }
+
+    .section-heading p {
+      margin-top: 13px;
+      color: #63778d;
+      line-height: 1.7;
+    }
+
+    /* ================= SERVICES ================= */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 20px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 28px 22px;
+      border-radius: 18px;
+      border: 1px solid #e3ebf3;
+      box-shadow: 0 10px 30px rgba(10,50,90,.05);
+      transition: .3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 3px;
+      background: #12b9ef;
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: .3s;
+    }
+
+    .service-card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 18px 40px rgba(10,50,90,.12);
+    }
+
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+
+    .service-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 15px;
+      background: #eaf8fe;
+      display: grid;
+      place-items: center;
+      font-size: 28px;
+      margin-bottom: 18px;
+    }
+
+    .service-card h3 {
+      color: #0b2947;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #718296;
+      line-height: 1.6;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .service-card a {
+      color: #079fd3;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    /* ================= WHY US ================= */
+
+    .why {
+      background: #071c35;
+      color: white;
+    }
+
+    .why-inner {
+      max-width: 1200px;
+      margin: auto;
+      padding: 85px 20px;
+    }
+
+    .why .section-heading h2 {
+      color: white;
+    }
+
+    .why .section-heading p {
+      color: #aebfd1;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 20px;
+    }
+
+    .why-card {
+      padding: 28px;
+      border-radius: 17px;
+      background: rgba(255,255,255,.055);
+      border: 1px solid rgba(255,255,255,.09);
+    }
+
+    .why-card span {
+      font-size: 27px;
+    }
+
+    .why-card h3 {
+      margin: 15px 0 9px;
+    }
+
+    .why-card p {
+      color: #b6c8da;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    /* ================= BRANDS ================= */
+
+    .brands {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 15px;
+    }
+
+    .brand {
+      min-height: 105px;
+      display: grid;
+      place-items: center;
+      background: white;
+      border: 1px solid #e2ebf3;
+      border-radius: 16px;
+      font-weight: 900;
+      font-size: 20px;
+      color: #173a5c;
+      box-shadow: 0 8px 25px rgba(10,50,90,.05);
+    }
+
+    .brand:nth-child(2) {
+      color: #0073bb;
+    }
+
+    .brand:nth-child(3) {
+      color: #f39a16;
+    }
+
+    .brand:nth-child(4) {
+      color: #d71920;
+    }
+
+    /* ================= HOW IT WORKS ================= */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 20px;
+    }
+
+    .step {
+      background: white;
+      border: 1px solid #e4edf5;
+      border-radius: 17px;
+      padding: 27px 20px;
+      text-align: center;
+    }
+
+    .step-number {
+      width: 45px;
+      height: 45px;
+      margin: auto;
+      display: grid;
+      place-items: center;
+      background: #0aade1;
+      color: white;
+      border-radius: 50%;
+      font-weight: 900;
+    }
+
+    .step h3 {
+      margin: 16px 0 8px;
+    }
+
+    .step p {
+      color: #708297;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* ================= BOOKING ================= */
+
+    .booking {
+      background: linear-gradient(135deg,#eafaff,#f5fbff);
+      border: 1px solid #dceef7;
+      border-radius: 25px;
+      padding: 45px 30px;
+      text-align: center;
+    }
+
+    .booking h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+      color: #092542;
+    }
+
+    .booking p {
+      color: #65798e;
+      margin-bottom: 25px;
+      line-height: 1.6;
+    }
+
+    /* ================= MAP ================= */
+
+    .map-box {
+      overflow: hidden;
+      border-radius: 20px;
+      border: 1px solid #dce7f0;
+      box-shadow: 0 12px 35px rgba(10,50,90,.08);
+      background: white;
+    }
+
+    .map-placeholder {
+      min-height: 260px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(rgba(5,31,55,.7),rgba(5,31,55,.7)),
+        radial-gradient(circle,#65c9ee,#0b3659);
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .map-placeholder .pin {
+      font-size: 45px;
+      margin-bottom: 12px;
+    }
+
+    .map-placeholder h3 {
+      margin-bottom: 8px;
+    }
+
+    .map-placeholder p {
+      color: #d5e6f3;
+      margin-bottom: 20px;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 25px;
+    }
+
+    .contact-card {
+      background: white;
+      padding: 30px;
+      border-radius: 18px;
+      border: 1px solid #e1ebf4;
+    }
+
+    .contact-card h3 {
+      margin-bottom: 20px;
+    }
+
+    .contact-number {
+      display: block;
+      color: #087ea8;
+      font-size: 20px;
+      font-weight: 800;
+      margin: 13px 0;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer {
+      background: #06182c;
+      color: #9fb2c7;
+      padding: 45px 20px 25px;
+    }
+
+    .footer-inner {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 35px;
+    }
+
+    footer h3,
+    footer h4 {
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    footer p,
+    footer a {
+      color: #9fb2c7;
+      line-height: 1.8;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      color: #20c7ff;
+    }
+
+    .copyright {
+      max-width: 1200px;
+      margin: 35px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    /* ================= FLOATING BUTTONS ================= */
+
+    .floating {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      z-index: 999;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .float-btn {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      color: white;
+      font-size: 23px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.22);
+    }
+
+    .float-whatsapp {
+      background: #20c76a;
+    }
+
+    .float-call {
+      background: #087ed0;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 850px) {
+
+      .nav-links {
+        display: none;
+      }
+
+      .trust-grid,
+      .services-grid,
+      .brands,
+      .steps {
+        grid-template-columns: repeat(2,1fr);
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-inner {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 560px) {
+
+      .hero {
+        min-height: 610px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+        letter-spacing: -1.5px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .trust-grid,
+      .services-grid,
+      .brands,
+      .steps,
+      .why-grid,
+      .contact-grid,
+      .footer-inner {
+        grid-template-columns: 1fr;
+      }
+
+      .section,
+      .why-inner {
+        padding: 65px 17px;
+      }
+
+      .booking {
+        padding: 35px 20px;
+      }
+
+      .booking h2 {
+        font-size: 28px;
+      }
+
+      .floating {
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+  <nav class="nav">
+
+    <a href="#home" class="logo">
+      RAJ <span>RAFREGIRETINON</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#brands">Brands</a>
+      <a href="#booking">Booking</a>
+      <a href="#location">Location</a>
+
+      <a class="nav-call" href="tel:+919933869133">
+        📞 Call Now
+      </a>
+    </div>
+
+  </nav>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      PROFESSIONAL HOME APPLIANCE SERVICE
+    </div>
+
+    <h1>
+      Expert <span>AC & Appliance</span>
+      Service At Your Doorstep
+    </h1>
+
+    <p>
+      Reliable repair and maintenance service for AC,
+      refrigerator, cooler and washing machine.
+      Professional service with quick response.
+    </p>
+
+    <div class="hero-buttons">
+
+      <a class="btn btn-whatsapp"
+         href="https://wa.me/919933869133?text=Hello%20Raj%20Rafregiretinon,%20I%20want%20to%20book%20a%20service."
+         target="_blank">
+        💬 Book on WhatsApp
+      </a>
+
+      <a class="btn btn-call"
+         href="tel:+919933869133">
+        📞 Call Now
+      </a>
+
+      <a class="btn btn-map"
+         href="https://maps.app.goo.gl/MkHDj1rctR1S8VAw9?g_st=ac"
+         target="_blank">
+        📍 View Location
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= TRUST ================= -->
+
+<section class="trust">
+
+  <div class="trust-grid">
+
+    <div class="trust-item">
+      <strong>✓</strong>
+      Professional Service
+    </div>
+
+    <div class="trust-item">
+      <strong>⚡</strong>
+      Quick Response
+    </div>
+
+    <div class="trust-item">
+      <strong>🏠</strong>
+      Doorstep Service
+    </div>
+
+    <div class="trust-item">
+      <strong>🔧</strong>
+      Multiple Appliances
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="section" id="services">
+
+  <div class="section-heading">
+
+    <small>OUR SERVICES</small>
+
+    <h2>Complete Appliance Service</h2>
+
+    <p>
+      Professional repair, servicing, installation and
+      maintenance for your essential home appliances.
+    </p>
+
+  </div>
+
+
+  <div class="services-grid">
+
+    <div class="service-card">
+      <div class="service-icon">❄️</div>
+      <h3>AC Service</h3>
+      <p>
+        AC servicing, cooling problems, installation,
+        maintenance and repair.
+      </p>
+      <a href="#booking">BOOK SERVICE →</a>
+    </div>
+
+
+    <div class="service-card">
+      <div class="service-icon">🧊</div>
+      <h3>Refrigerator</h3>
+      <p>
+        Refrigerator cooling, gas, compressor and
+        general repair service.
+      </p>
+      <a href="#booking">BOOK SERVICE →</a>
+    </div>
+
+
+    <div class="service-card">
+      <div class="service-icon">🌬️</div>
+      <h3>Air Cooler</h3>
+      <p>
+        Cooler cleaning, pump, motor and cooling
+        related service.
+      </p>
+      <a href="#booking">BOOK SERVICE →</a>
+    </div>
+
+
+    <div class="service-card">
+      <div class="service-icon">🧺</div>
+      <h3>Washing Machine</h3>
+      <p>
+        Washing machine repair, maintenance and
+        installation service.
+      </p>
+      <a href="#booking">BOOK SERVICE →</a>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= WHY US ================= -->
+
+<section class="why">
+
+  <div class="why-inner">
+
+    <div class="section-heading">
+
+      <small>WHY CHOOSE US</small>
+
+      <h2>Service You Can Trust</h2>
+
+      <p>
+        We focus on professional service, quick response
+        and customer satisfaction.
+      </p>
+
+    </div>
+
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <span>👨‍🔧</span>
+        <h3>Professional Technicians</h3>
+        <p>
+          Skilled service for different home appliances
+          and common repair requirements.
+        </p>
+      </div>
+
+
+      <div class="why-card">
+        <span>🏠</span>
+        <h3>Doorstep Service</h3>
+        <p>
+          Get appliance service at your home without
+          unnecessary hassle.
+        </p>
+      </div>
+
+
+      <div class="why-card">
+        <span>⚡</span>
+        <h3>Quick Response</h3>
+        <p>
+          Contact us directly through WhatsApp or phone
+          for faster service requests.
+        </p>
+      </div>
+
+
+      <div class="why-card">
+        <span>🔧</span>
+        <h3>Multiple Services</h3>
+        <p>
+          AC, refrigerator, cooler and washing machine
+          service from one place.
+        </p>
+      </div>
+
+
+      <div class="why-card">
+        <span>📱</span>
+        <h3>Easy Booking</h3>
+        <p>
+          Send your service requirement directly on
+          WhatsApp.
+        </p>
+      </div>
+
+
+      <div class="why-card">
+        <span>⭐</span>
+        <h3>Customer First</h3>
+        <p>
+          Professional communication and service focused
+          on customer satisfaction.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BRANDS ================= -->
+
+<section class="section" id="brands">
+
+  <div class="section-heading">
+
+    <small>BRANDS WE SERVICE</small>
+
+    <h2>Major Brands Supported</h2>
+
+    <p>
+      Service available for selected popular home
+      appliance brands.
+    </p>
+
+  </div>
+
+
+  <div class="brands">
+
+    <div class="brand">
+      BLUE STAR
+    </div>
+
+    <div class="brand">
+      VOLTAS
+    </div>
+
+    <div class="brand">
+      SYMPHONY
+    </div>
+
+    <div class="brand">
+      HAIER
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="section">
+
+  <div class="section-heading">
+
+    <small>HOW IT WORKS</small>
+
+    <h2>Book Your Service In 4 Steps</h2>
+
+  </div>
+
+
+  <div class="steps">
+
+    <div class="step">
+      <div class="step-number">01</div>
+      <h3>Book</h3>
+      <p>
+        Contact us through WhatsApp or phone.
+      </p>
+    </div>
+
+
+    <div class="step">
+      <div class="step-number">02</div>
+      <h3>Discuss</h3>
+      <p>
+        Tell us about your appliance problem.
+      </p>
+    </div>
+
+
+    <div class="step">
+      <div class="step-number">03</div>
+      <h3>Visit</h3>
+      <p>
+        Technician visits your location.
+      </p>
+    </div>
+
+
+    <div class="step">
+      <div class="step-number">04</div>
+      <h3>Service</h3>
+      <p>
+        Appliance gets serviced professionally.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ================= BOOKING ================= -->
+
+<section class="section" id="booking">
+
+  <div class="booking">
+
+    <h2>Need Appliance Service?</h2>
+
+    <p>
+      Send your service requirement directly on WhatsApp
+      and book your doorstep service.
+    </p>
+
+    <a class="btn btn-whatsapp"
+       href="https://wa.me/919933869133?text=Hello%20Raj%20Rafregiretinon,%20I%20want%20to%20book%20a%20service.%0A%0AName:%0AService:%0AAppliance%20Problem:%0AAddress:"
+       target="_blank">
+
+      💬 Book Service on WhatsApp
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- ================= LOCATION ================= -->
+
+<section class="section" id="location">
+
+  <div class="section
